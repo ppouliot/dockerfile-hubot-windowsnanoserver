@@ -1,2 +1,2 @@
-# docker-file-hubot-windowsnanoserver
-Hubot in a Windows NanoServer
+# dockerfile-hubot-windowsnanoserver
+A Dockerfile for building and running Hubot on WindowsNanoServer containers
