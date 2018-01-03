@@ -46,7 +46,8 @@ RUN \
     md c:\rak-hubot ;\
     cd c:\rak-hubot ;\
     yo hubot --owner="Peter J. Pouliot <peter@pouliot.net>" --name="Hubot" --description="Rakops Hubot" --adapter=campfire --defaults ;\
-    [Environment]::SetEnvironmentVariable("HUBOT_ADAPTER", "Campfire", "Machine"); \ 
+RUN \
+    [Environment]::SetEnvironmentVariable("HUBOT_ADAPTER", "Campfire", "Machine")
 
 VOLUME C:\\data
 WORKDIR C:\\data
