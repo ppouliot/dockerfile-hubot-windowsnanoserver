@@ -40,7 +40,7 @@ RUN \
     Expand-Archive -Path C:\node-v$ENV:NODEJS_VERSION-win-x64.zip -DestinationPath C:\ -Force; \
     Remove-Item -Path c:\node-v$ENV:NODEJS_VERSION-win-x64.zip -Confirm:$False; \
     Rename-Item -Path node-v$ENV:NODEJS_VERSION-win-x64 -NewName nodejs; \
-    refreshenv;
+    refreshenv
 RUN \
     npm install -y yo generator-hubot ; \
     md c:\rak-hubot ;\
