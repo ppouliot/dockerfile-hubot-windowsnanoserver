@@ -13,6 +13,7 @@ RUN $newPath = ('C:\Redis;{0}' -f $env:PATH); \
 
 ENV REDIS_VERSION 3.2.100
 ENV REDIS_DOWNLOAD_URL https://github.com/MSOpenTech/redis/releases/download/win-${REDIS_VERSION}/Redis-x64-${REDIS_VERSION}.zip
+ENV NODEJS_VERSION 9.3.0
 
 RUN Write-Host ('Downloading {0} ...' -f $env:REDIS_DOWNLOAD_URL); \
 	Invoke-WebRequest -Uri $env:REDIS_DOWNLOAD_URL -OutFile 'redis.zip'; \
@@ -33,14 +34,13 @@ RUN (Get-Content C:\Redis\redis.windows.conf) \
 	-Replace '^(bind)\s+.*$', '$1 0.0.0.0' \
 	-Replace '^(protected-mode)\s+.*$', '$1 no' \
 	| Set-Content C:\Redis\redis.docker.conf
-
-# Note: Install Chocolatey
 RUN \
-    # Install Chocolatey and Packages
-    Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')); \
-    choco install openssh git wget curl rsync unzip winrar dotnet4.6.2 python3 ruby nodejs -Y ; \
-    setx /m PATH "%PATH%;C:\Program Files\nodejs"; \
-    refreshenv 
+    # Install NodeJS
+    Invoke-WebRequest -Uri https://nodejs.org/dist/latest-v9.x/node-v$ENV:NODEJS_VERSION-win-x64.zip -Outfile c:\node-v$ENV:NODEJS_VERSION-win-x64.zip; \
+    Expand-Archive -Path C:\node-v$ENV:NODEJS_VERSION-win-x64.zip -DestinationPath C:\ -Force; \
+    Remove-Item -Path c:\node-v$ENV:NODEJS_VERSION-win-x64.zip -Confirm:$False; \
+    Rename-Item -Path node-v$ENV:NODEJS_VERSION-win-x64 -NewName nodejs; \
+    refreshenv;
 RUN \
     npm install -y yo generator-hubot ; \
     md c:\rak-hubot ;\
