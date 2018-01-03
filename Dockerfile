@@ -15,7 +15,7 @@ RUN \
 #SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
 
 # PATH isn't actually set in the Docker image, so we have to set it from within the container
-RUN $newPath = ('C:\Redis;{0}' -f $env:PATH); \
+RUN $newPath = ('C:\Redis;C:\nodejs;{0}' -f $env:PATH); \
 	Write-Host ('Updating PATH: {0}' -f $newPath); \
 # Nano Server does not have "[Environment]::SetEnvironmentVariable()"
 	setx /M PATH $newPath;
