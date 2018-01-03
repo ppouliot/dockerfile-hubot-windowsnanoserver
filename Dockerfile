@@ -45,9 +45,7 @@ RUN \
     npm install -y yo generator-hubot ; \
     md c:\rak-hubot ;\
     cd c:\rak-hubot ;\
-    yo hubot --owner="Peter J. Pouliot <peter@pouliot.net>" --name="Hubot" --description="Rakops Hubot" --adapter=campfire --defaults ;\
-RUN \
-    [Environment]::SetEnvironmentVariable("HUBOT_ADAPTER", "Campfire", "Machine")
+    yo hubot --owner="Peter J. Pouliot <peter@pouliot.net>" --name="Hubot" --description="Rakops Hubot" --adapter=campfire --defaults
 
 VOLUME C:\\data
 WORKDIR C:\\data
