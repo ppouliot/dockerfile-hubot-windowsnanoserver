@@ -40,7 +40,7 @@ RUN \
     Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')); \
     choco install openssh git wget curl rsync unzip winrar dotnet4.6.2 python3 ruby nodejs -Y ; \
     setx /m PATH "%PATH%;C:\Program Files\nodejs"; \
-    refreshenv ;\
+    refreshenv 
 RUN \
     npm install -y yo generator-hubot ; \
     md c:\rak-hubot ;\
