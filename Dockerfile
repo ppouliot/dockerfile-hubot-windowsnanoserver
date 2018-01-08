@@ -45,7 +45,7 @@ RUN (Get-Content C:\Redis\redis.windows.conf) \
 	| Set-Content C:\Redis\redis.docker.conf
 
 RUN \
-    cmd /c 'C:\nodejs\npm.cmd install -g yo generator-hubot'; \
+    cmd /c 'C:\nodejs\npm.cmd install -g coffeescript yo generator-hubot'; \
     md c:\hubot ;\
     cd c:\hubot ;\
     cmd /c 'C:\nodejs\npm.cmd install -g css-select css-what minimatch uuid coffeescript'; \
