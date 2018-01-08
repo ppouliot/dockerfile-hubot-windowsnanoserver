@@ -48,7 +48,7 @@ RUN \
     cmd /c 'C:\nodejs\npm.cmd install -g yo generator-hubot'; \
     md c:\hubot ;\
     cd c:\hubot ;\
-    yo hubot --owner='Peter J. Pouliot <peter@pouliot.net>' --name="Hubot" --description="Hubot in NanonServer Container" --adapter=campfire --defaults
+    yo hubot --owner='Peter J. Pouliot <peter@pouliot.net>' --name="Hubot" --description="Hubot in NanonServer Container" --adapter=slack --defaults
 
 COPY hubot-start.ps1 c:\hubot\hubot-start.ps1
 
