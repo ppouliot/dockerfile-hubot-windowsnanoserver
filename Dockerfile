@@ -54,9 +54,8 @@ RUN \
 COPY hubot-start.ps1 c:\hubot\hubot-start.ps1
 COPY Dockerfile c:\Dockerfile
 
-# Redis Data
-VOLUME C:\\data
-WORKDIR C:\\data
+VOLUME c:\hubot
+WORKDIR c:\hubot
 
 EXPOSE 6379
-CMD ["redis-server.exe", "C:\\Redis\\redis.docker.conf"]
+CMD ndo["redis-server.exe", "C:\\Redis\\redis.docker.conf"]
