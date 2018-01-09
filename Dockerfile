@@ -49,9 +49,10 @@ RUN \
     md c:\hubot ;\
     cd c:\hubot ;\
     cmd /c 'C:\nodejs\npm.cmd install -g css-select css-what minimatch uuid coffeescript'; \
-    yo hubot --owner='Peter J. Pouliot <peter@pouliot.net>' --name="Hubot" --description="Hubot in NanonServer Container" --adapter=slack --defaults
+    yo hubot --owner='Peter J. Pouliot <peter@pouliot.net>' --name="Hubot" --description="Hubot in NanonServer Container" --adapter=slack --defaults ; \
+    cmd /c 'C:\nodejs\npm.cmd uninstall hubot-heroku-keepalive --save ; \
 
-COPY hubot-start.ps1 C:\\hubot\\hubot-start.ps1
+COPY hubot-start.ps1 C:\\hubot-start.ps1
 COPY Dockerfile C:\\Dockerfile
 
 VOLUME C:\\data
