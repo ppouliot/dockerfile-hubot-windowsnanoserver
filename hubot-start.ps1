@@ -4,6 +4,7 @@
 $HubotPath = "drive:\path\to\hubot"
 $HubotAdapter = "Hubot adapter"
 
+[Environment]::SetEnvironmentVariable("HUBOT_SLACK_TOKEN","$env:HUBOT_SLACK_TOKEN","Machine")
 Write-Host "Starting Hubot Watcher"
 While (1)
 {

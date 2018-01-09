@@ -51,8 +51,8 @@ RUN \
     cmd /c 'C:\nodejs\npm.cmd install -g css-select css-what minimatch uuid coffeescript'; \
     yo hubot --owner='Peter J. Pouliot <peter@pouliot.net>' --name="Hubot" --description="Hubot in NanonServer Container" --adapter=slack --defaults
 
-COPY hubot-start.ps1 c:\hubot\hubot-start.ps1
-COPY Dockerfile c:\Dockerfile
+COPY hubot-start.ps1 C:\\hubot\\hubot-start.ps1
+COPY Dockerfile C:\\Dockerfile
 
 VOLUME C:\\data
 WORKDIR C:\\data
