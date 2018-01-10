@@ -61,7 +61,6 @@ RUN \
 	hubot-github-deployments \
 	hubot-pull-review \
 	hubot-github-merge \
-	hubot-ghe \
 	hubot-github-contribution-stats \
 	hubot-github-issue-label \
 	hubot-list-pulls \
@@ -74,6 +73,8 @@ RUN \
 	hubot-slack-github-issues \
 	hubot-gh-issues \
 	hubot-github-pull-requests \
+	hubot-ghe \
+	hubot-ghe-backup-snapshot \
 	hubot-ghe-external-auto \
 	hubot-ghe-external \
 	hubot-ghe-failure-recovery \

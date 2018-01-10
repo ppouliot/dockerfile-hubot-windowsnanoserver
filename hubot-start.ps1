@@ -8,5 +8,5 @@ Write-Host "Starting Hubot Watcher"
 While (1)
 {
     Write-Host "Starting Hubot"
-    Start-Process powershell -ArgumentList "$HubotPath\bin\hubot –adapter $HubotAdapter" -wait
+    Start-Process powershell -ArgumentList "$HubotPath\bin\hubot –-adapter $HubotAdapter" -wait
 }
