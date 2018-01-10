@@ -52,7 +52,7 @@ RUN \
     yo hubot --owner='Peter J. Pouliot <peter@pouliot.net>' --name="Hubot" --description="Hubot in NanonServer Container" --adapter=slack --defaults 
 
 RUN \    
-    cmd /c 'C:\nodejs\npm.cmd uninstall hubot-heroku-keepalive --save ; \
+    cmd /c 'C:\nodejs\npm.cmd uninstall hubot-heroku-keepalive --save' ; \
     rm -Force c:\hubot\hubot-scripts.json ; \
     Rename-Item c:\hubot\external-scripts.json external-scripts.json-in ; \
     Get-Content C:\hubot\external-scripts.json-in \
