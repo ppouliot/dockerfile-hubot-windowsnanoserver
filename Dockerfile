@@ -48,7 +48,7 @@ RUN \
     cmd /c 'C:\nodejs\npm.cmd install -g coffeescript yo generator-hubot'; \
     md c:\hubot ;\
     cd c:\hubot ;\
-    cmd /c 'C:\nodejs\npm.cmd install -g css-select css-what minimatch uuid coffeescript'; \
+    cmd /c 'C:\nodejs\npm.cmd install -g css-select css-what minimatch uuid coffeescript hubot-github-management hubot-github-merge-generic hubot-github-repo-event-notifier hubot-code-review hubot-github-deployments hubot-pull-review hubot-github-merge hubot-ghe hubot-github-contribution-stats hubot-github-issue-label hubot-list-pulls hubot-jenkins-gof hubot-gh-token hubot-ci hubot-gh-release-pr hubot-github-pages hubot-github-identity hubot-slack-github-issues hubot-gh-issues hubot-github-pull-requests hubot-ghe-external-auto hubot-ghe-external hubot-ghe-failure-recovery hubot-ghe-monitor-graph'; \
     yo hubot --owner='Peter J. Pouliot <peter@pouliot.net>' --name="Hubot" --description="Hubot in NanonServer Container" --adapter=slack --defaults 
 
 RUN \    
@@ -58,6 +58,7 @@ RUN \
     Get-Content C:\hubot\external-scripts.json-in \
     | Where-Object {$_ -notmatch '"hubot-heroku-keepalive",'} \
     |Set-Content c:\hubot\external-scripts.json
+    
 
 COPY hubot-start.ps1 C:\\hubot-start.ps1
 COPY Dockerfile C:\\Dockerfile
