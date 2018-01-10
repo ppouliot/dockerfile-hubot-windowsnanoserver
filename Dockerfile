@@ -81,10 +81,9 @@ RUN \
 	hubot-ghe-monitor-graph'; \
     yo hubot --owner='Peter J. Pouliot <peter@pouliot.net>' --name="Hubot" --description="Hubot in NanonServer Container" --adapter=slack --defaults ; \  
     cmd /c 'C:\nodejs\npm.cmd uninstall hubot-heroku-keepalive --save' ; \
-    rm -Force c:\hubot\hubot-scripts.json ; \
-    cmd /c 'move C:\hubot\external-scripts.json C:\hubot\external-scripts.json-in' ; \
-    Get-Content c:\hubot\external-scripts.json-in | Where-Object {$_ -notmatch '"hubot-heroku-keepalive",'} | Set-Content c:\hubot\external-scripts.json
+    rm -Force c:\hubot\hubot-scripts.json
 
+COPY external-scripts.json C:\\hubot\\external-scripts.json
 COPY hubot-start.ps1 C:\\hubot-start.ps1
 COPY Dockerfile C:\\Dockerfile
 
