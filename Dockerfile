@@ -1,7 +1,7 @@
 FROM microsoft/nanoserver:latest
 MAINTAINER Peter J. Pouliot <peter@pouliot.net>
 
-ENV NODEJS_VERSION 9.3.0
+ENV NODEJS_VERSION 9.4.0
 
 SHELL ["powershell", "-command"]
 RUN \
@@ -54,10 +54,10 @@ RUN \
 RUN \    
     cmd /c 'C:\nodejs\npm.cmd uninstall hubot-heroku-keepalive --save' ; \
     rm -Force c:\hubot\hubot-scripts.json ; \
-    Rename-Item c:\hubot\external-scripts.json external-scripts.json-in ; \
+    Rename-Item c:\hubot\external-scripts.json c:\hubot\external-scripts.json-in ; \
     Get-Content C:\hubot\external-scripts.json-in \
     | Where-Object {$_ -notmatch '"hubot-heroku-keepalive",'} \
-    |Set-Content external-scripts.json
+    |Set-Content c:\hubot\external-scripts.json
 
 COPY hubot-start.ps1 C:\\hubot-start.ps1
 COPY Dockerfile C:\\Dockerfile
