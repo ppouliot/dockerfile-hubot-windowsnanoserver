@@ -1,5 +1,5 @@
 #Hubot PowerShell Start Script
-#Invoke from the PowerShell prompt or start via automated tools 
+#Invoke from the PowerShell prompt or start via automated tools
 
 $HubotPath = "c:\hubot"
 $HubotAdapter = "slack"
