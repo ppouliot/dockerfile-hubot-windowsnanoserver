@@ -83,7 +83,7 @@ RUN \
     hubot-plusplus \
     hubot-standup-alarm \
     hubot-tell \
-    hubot-thank-you'; \
+    hubot-thank-you \
     hubot-what-the-fox'; \
     yo hubot --owner='Peter J. Pouliot <peter@pouliot.net>' --name="Hubot" --description="Hubot in NanonServer Container" --adapter=slack --defaults ; \  
     cmd /c 'C:\nodejs\npm.cmd uninstall hubot-heroku-keepalive --save' ; \
