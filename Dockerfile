@@ -48,6 +48,9 @@ RUN \
     cmd /c 'C:\nodejs\npm.cmd install -g coffeescript yo generator-hubot'; \
     md c:\hubot ;\
     cd c:\hubot ;\
+    yo hubot --owner='Peter J. Pouliot <peter@pouliot.net>' --name="Hubot" --description="Hubot in NanonServer Container" --adapter=slack --defaults
+RUN \
+    cmd /c 'C:\nodejs\npm.cmd uninstall hubot-heroku-keepalive --save' ; \
     cmd /c 'C:\nodejs\npm.cmd install -g \
     css-select \
     css-what \
@@ -59,8 +62,6 @@ RUN \
     hubot-ghe-external-auto \
     hubot-ghe-external \
     hubot-ghe-failure-recovery'; \
-    yo hubot --owner='Peter J. Pouliot <peter@pouliot.net>' --name="Hubot" --description="Hubot in NanonServer Container" --adapter=slack --defaults ; \  
-    cmd /c 'C:\nodejs\npm.cmd uninstall hubot-heroku-keepalive --save' ; \
     rm -Force c:\hubot\hubot-scripts.json
 
 COPY external-scripts.json C:\\hubot\\external-scripts.json
