@@ -72,6 +72,7 @@ RUN \
 #    hubot-list-pulls \
 #    hubot-pull-review \
     hubot-auth \
+    hubot-docker \
     hubot-ghe \
     hubot-ghe-backup-snapshot \
     hubot-ghe-external-auto \
@@ -81,8 +82,8 @@ RUN \
     hubot-jenkins \
     hubot-nagios \
     hubot-plusplus \
+    hubot-puppet-utils \
     hubot-standup-alarm \
-    hubot-slack-github-issues \
     hubot-tell \
     hubot-thank-you \
     hubot-what-the-fox'; \
