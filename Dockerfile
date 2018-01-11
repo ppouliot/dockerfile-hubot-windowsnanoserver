@@ -65,7 +65,7 @@ RUN \
     rm -Force c:\hubot\hubot-scripts.json
 
 COPY external-scripts.json C:\\hubot\\external-scripts.json
-COPY hubot-start.ps1 C:\\hubot-start.ps1
+COPY hubot-start.ps1 C:\\hubot\\hubot-start.ps1
 COPY Dockerfile C:\\Dockerfile
 
 VOLUME C:\\data
