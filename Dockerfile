@@ -76,16 +76,16 @@ RUN \
     hubot-ghe-backup-snapshot \
     hubot-ghe-external-auto \
     hubot-ghe-external \
-    hubot-ghe-failure-recovery \
-    hubot-gh-token \
-    hubot-jenkins \
-    hubot-nagios \
-    hubot-plusplus \
-    hubot-puppet-utils \
-    hubot-standup-alarm \
-    hubot-tell \
-    hubot-thank-you \
-    hubot-what-the-fox'; \
+    hubot-ghe-failure-recovery'; \
+#    hubot-gh-token \
+#    hubot-jenkins \
+#    hubot-nagios \
+#    hubot-plusplus \
+#    hubot-puppet-utils \
+#    hubot-standup-alarm \
+#    hubot-tell \
+#    hubot-thank-you \
+#    hubot-what-the-fox'; \
     yo hubot --owner='Peter J. Pouliot <peter@pouliot.net>' --name="Hubot" --description="Hubot in NanonServer Container" --adapter=slack --defaults ; \  
     cmd /c 'C:\nodejs\npm.cmd uninstall hubot-heroku-keepalive --save' ; \
     rm -Force c:\hubot\hubot-scripts.json
