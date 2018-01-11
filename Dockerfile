@@ -80,6 +80,7 @@ RUN \
     hubot-ghe-external \
     hubot-ghe-failure-recovery \
     hubot-jenkins \
+    hubot-nagios \
     hubot-plusplus \
     hubot-standup-alarm \
     hubot-tell \

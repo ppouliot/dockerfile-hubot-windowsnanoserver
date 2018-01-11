@@ -4,9 +4,13 @@
   "hubot-ghe",
   "hubot-google-images",
   "hubot-google-translate",
-  "hubot-pugme",
   "hubot-maps",
+  "hubot-pugme",
+  "hubot-plusplus",
   "hubot-redis-brain",
   "hubot-rules",
-  "hubot-shipit"
+  "hubot-shipit",
+  "hubot-tell",
+  "hubot-thankyou",
+  "hubot-what-the-fox"
 ]
