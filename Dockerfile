@@ -54,25 +54,25 @@ RUN \
     minimatch \
     uuid \
     coffeescript \
-    hubot-github-management \
-    hubot-github-merge-generic \
-    hubot-github-repo-event-notifier \
-    hubot-code-review \
-    hubot-github-deployments \
-    hubot-pull-review \
-    hubot-github-merge \
-    hubot-github-contribution-stats \
-    hubot-github-issue-label \
-    hubot-list-pulls \
-    hubot-jenkins-gof \
-    hubot-gh-token \
-    hubot-ci \
-    hubot-gh-release-pr \
-    hubot-github-pages \
-    hubot-github-identity \
-    hubot-slack-github-issues \
-    hubot-gh-issues \
-    hubot-github-pull-requests \
+#    hubot-github-management \
+#    hubot-github-merge-generic \
+#    hubot-github-repo-event-notifier \
+#    hubot-code-review \
+#    hubot-github-deployments \
+#    hubot-pull-review \
+#    hubot-github-merge \
+#    hubot-github-contribution-stats \
+#    hubot-github-issue-label \
+#    hubot-list-pulls \
+#    hubot-jenkins-gof \
+#    hubot-gh-token \
+#    hubot-ci \
+#    hubot-gh-release-pr \
+#    hubot-github-pages \
+#    hubot-github-identity \
+#    hubot-slack-github-issues \
+#    hubot-gh-issues \
+#    hubot-github-pull-requests \
     hubot-ghe \
     hubot-ghe-backup-snapshot \
     hubot-ghe-external-auto \
