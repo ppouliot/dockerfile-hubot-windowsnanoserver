@@ -48,45 +48,18 @@ RUN \
     cmd /c 'C:\nodejs\npm.cmd install -g coffeescript yo generator-hubot'; \
     md c:\hubot ;\
     cd c:\hubot ;\
-    yo hubot --owner='Peter J. Pouliot <peter@pouliot.net>' --name="Hubot" --description="Hubot in NanonServer Container" --adapter=slack --defaults ; \  
     cmd /c 'C:\nodejs\npm.cmd install -g \
     css-select \
     css-what \
     minimatch \
     uuid \
     coffeescript \
-#    hubot-ci \
-#    hubot-code-review \
-#    hubot-github-contribution-stats \
-#    hubot-github-deployments \
-#    hubot-github-identity \
-#    hubot-github-issue-label \
-#    hubot-github-management \
-#    hubot-github-merge \
-#    hubot-github-merge-generic \
-#    hubot-github-repo-event-notifier \
-#    hubot-github-pages \
-#    hubot-github-pull-requests \
-#    hubot-gh-release-pr \
-#    hubot-gh-issues \
-#    hubot-jenkins-gof \
-#    hubot-list-pulls \
-#    hubot-pull-review \
-#    hubot-auth \
     hubot-ghe \
     hubot-ghe-backup-snapshot \
     hubot-ghe-external-auto \
     hubot-ghe-external \
     hubot-ghe-failure-recovery'; \
-#    hubot-gh-token \
-#    hubot-jenkins \
-#    hubot-nagios \
-#    hubot-plusplus \
-#    hubot-puppet-utils \
-#    hubot-standup-alarm \
-#    hubot-tell \
-#    hubot-thank-you \
-#    hubot-what-the-fox'; \
+    yo hubot --owner='Peter J. Pouliot <peter@pouliot.net>' --name="Hubot" --description="Hubot in NanonServer Container" --adapter=slack --defaults ; \  
     cmd /c 'C:\nodejs\npm.cmd uninstall hubot-heroku-keepalive --save' ; \
     rm -Force c:\hubot\hubot-scripts.json
 
