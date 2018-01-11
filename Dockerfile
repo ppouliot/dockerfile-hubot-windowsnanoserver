@@ -71,8 +71,7 @@ RUN \
 #    hubot-jenkins-gof \
 #    hubot-list-pulls \
 #    hubot-pull-review \
-    hubot-auth \
-    hubot-docker \
+#    hubot-auth \
     hubot-ghe \
     hubot-ghe-backup-snapshot \
     hubot-ghe-external-auto \
