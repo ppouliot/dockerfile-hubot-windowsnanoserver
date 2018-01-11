@@ -54,35 +54,35 @@ RUN \
     minimatch \
     uuid \
     coffeescript \
+#    hubot-ci \
+#    hubot-code-review \
+#    hubot-github-contribution-stats \
+#    hubot-github-deployments \
+#    hubot-github-identity \
+#    hubot-github-issue-label \
 #    hubot-github-management \
+#    hubot-github-merge \
 #    hubot-github-merge-generic \
 #    hubot-github-repo-event-notifier \
-#    hubot-code-review \
-#    hubot-github-deployments \
-#    hubot-pull-review \
-#    hubot-github-merge \
-#    hubot-github-contribution-stats \
-#    hubot-github-issue-label \
-#    hubot-list-pulls \
-#    hubot-jenkins-gof \
-#    hubot-gh-token \
-#    hubot-ci \
-#    hubot-gh-release-pr \
 #    hubot-github-pages \
-#    hubot-github-identity \
-#    hubot-slack-github-issues \
-#    hubot-gh-issues \
 #    hubot-github-pull-requests \
+#    hubot-gh-release-pr \
+#    hubot-gh-issues \
+#    hubot-jenkins-gof \
+#    hubot-list-pulls \
+#    hubot-pull-review \
     hubot-auth \
     hubot-ghe \
     hubot-ghe-backup-snapshot \
     hubot-ghe-external-auto \
     hubot-ghe-external \
     hubot-ghe-failure-recovery \
+    hubot-gh-token \
     hubot-jenkins \
     hubot-nagios \
     hubot-plusplus \
     hubot-standup-alarm \
+    hubot-slack-github-issues \
     hubot-tell \
     hubot-thank-you \
     hubot-what-the-fox'; \
