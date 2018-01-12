@@ -56,8 +56,7 @@ RUN \
     css-what \
     minimatch \
     uuid \
-    hubot-docker \
-    hubot-jenkins \
+    hubot-jenkins-enhanced \
     hubot-ghe \
     hubot-ghe-backup-snapshot \
     hubot-ghe-external-auto \
