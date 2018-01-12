@@ -47,7 +47,7 @@ RUN (Get-Content C:\Redis\redis.windows.conf) \
 VOLUME C:\\data
 WORKDIR C:\\data
 EXPOSE 6379
-CMD ndo["redis-server.exe", "C:\\Redis\\redis.docker.conf"]
+CMD ["redis-server.exe", "C:\\Redis\\redis.docker.conf"]
 
 # Install Hubot and related npms
 RUN \
