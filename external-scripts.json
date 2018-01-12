@@ -1,6 +1,8 @@
 [
   "hubot-diagnostics",
   "hubot-help",
+  "hubot-docker",
+  "hubot-jenkins",
   "hubot-ghe",
   "hubot-google-images",
   "hubot-google-translate",
