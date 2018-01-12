@@ -7,5 +7,4 @@ services:
       - "6379"                        
       - "8080"                   
     volumes:                                   
-      - "c:/data:c:/data"  
-      - "c:/hubot:c:/hubot"  
+      - "c:/data"  
