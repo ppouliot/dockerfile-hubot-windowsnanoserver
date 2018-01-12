@@ -73,7 +73,6 @@ COPY external-scripts.json C:\\hubot\\external-scripts.json
 COPY hubot-start.ps1 C:\\hubot\\hubot-start.ps1
 COPY Dockerfile C:\\Dockerfile
 
-VOLUME C:\\hubot
 WORKDIR C:\\hubot
 EXPOSE 8080
-ENTRYPOINT ["bin\\hubot", "--adapter slack"]
+CMD ["bin\\hubot", "--adapter slack"]
