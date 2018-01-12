@@ -7,7 +7,7 @@ SHELL ["powershell", "-command"]
 
 RUN \
     # Install Docker in Docker
-    Install-Module -Name DockerMsftProvider -Repository PSGallery -Force ; \
+    Install-Module -Name DockerMsftProvider -Repository PSGallery -Force \
     Install-Package -Name docker -ProviderName DockerMsftProvider
 
 RUN \
