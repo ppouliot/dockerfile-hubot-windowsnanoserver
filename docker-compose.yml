@@ -1,0 +1,13 @@
+version: '3'
+services:                                                 
+  rakbot:                                      
+    env_file:
+      - hubot.env
+    image: ppouliot/hubot-windowsnanoserver
+    build: .                                     
+    ports:                                    
+      - "6379"                        
+      - "8080"                   
+    volumes:                                   
+      - "c:/data:c:/data"  
+      - "c:/hubot:c:/hubot"  
