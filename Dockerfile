@@ -3,7 +3,8 @@ MAINTAINER Peter J. Pouliot <peter@pouliot.net>
 
 ENV NODEJS_VERSION 9.4.0
 
-SHELL ["powershell", "-command"]
+#SHELL ["powershell", "-command"]
+SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
 
 RUN \
     # Install NodeJS
@@ -61,6 +62,7 @@ RUN \
     minimatch \
     uuid \
     hubot-jenkins-enhanced \
+    hubot-github \
     hubot-ghe \
     hubot-ghe-backup-snapshot \
     hubot-ghe-external-auto \
@@ -74,4 +76,4 @@ COPY hubot-start.ps1 C:\\hubot\\hubot-start.ps1
 COPY Dockerfile C:\\Dockerfile
 
 EXPOSE 8080
-CMD ["C:\\hubot\hubot-start.ps1"]
+#CMD ["C:\\hubot\hubot-start.ps1"]
