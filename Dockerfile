@@ -72,5 +72,6 @@ COPY Dockerfile C:\\Dockerfile
 VOLUME C:\\data
 WORKDIR C:\\data
 
+EXPOSE 8080
 EXPOSE 6379
 CMD ndo["redis-server.exe", "C:\\Redis\\redis.docker.conf"]
