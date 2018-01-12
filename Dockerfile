@@ -44,6 +44,10 @@ RUN (Get-Content C:\Redis\redis.windows.conf) \
 	-Replace '^(bind)\s+.*$', '$1 0.0.0.0' \
 	-Replace '^(protected-mode)\s+.*$', '$1 no' \
 	| Set-Content C:\Redis\redis.docker.conf
+VOLUME C:\\data
+WORKDIR C:\\data
+EXPOSE 6379
+CMD ndo["redis-server.exe", "C:\\Redis\\redis.docker.conf"]
 
 # Install Hubot and related npms
 RUN \
@@ -69,9 +73,7 @@ COPY external-scripts.json C:\\hubot\\external-scripts.json
 COPY hubot-start.ps1 C:\\hubot\\hubot-start.ps1
 COPY Dockerfile C:\\Dockerfile
 
-VOLUME C:\\data
-WORKDIR C:\\data
-
+VOLUME C:\\hubot
+WORKDIR C:\\hubot
 EXPOSE 8080
-EXPOSE 6379
-CMD ndo["redis-server.exe", "C:\\Redis\\redis.docker.conf"]
+CMD ndo["bin\\hubot", "--adapter slack"]
