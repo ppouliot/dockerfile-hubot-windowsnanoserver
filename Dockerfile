@@ -55,6 +55,7 @@ RUN \
 #    minimatch \
 #    uuid \
 #    coffeescript \
+    hubot-docker \
     hubot-ghe \
     hubot-ghe-backup-snapshot \
     hubot-ghe-external-auto \
