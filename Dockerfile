@@ -50,11 +50,11 @@ RUN \
     cd c:\hubot ;\
     yo hubot --owner='Peter J. Pouliot <peter@pouliot.net>' --name="Hubot" --description="Hubot in NanonServer Container" --adapter=slack --defaults ; \
     cmd /c 'C:\nodejs\npm.cmd install \
-#    css-select \
-#    css-what \
-#    minimatch \
-#    uuid \
-#    coffeescript \
+    css-select \
+    css-what \
+    minimatch \
+    uuid \
+    coffeescript \
     hubot-docker \
     hubot-ghe \
     hubot-ghe-backup-snapshot \
