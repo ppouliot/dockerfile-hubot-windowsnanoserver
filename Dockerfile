@@ -50,6 +50,7 @@ RUN \
     cd c:\hubot ;\
     yo hubot --owner='Peter J. Pouliot <peter@pouliot.net>' --name="Hubot" --description="Hubot in NanonServer Container" --adapter=slack --defaults
 RUN \
+    cd c:\hubot ;\
     cmd /c 'C:\nodejs\npm.cmd install --save \
     css-select \
     css-what \
@@ -61,7 +62,7 @@ RUN \
     hubot-ghe-external-auto \
     hubot-ghe-external \
     hubot-ghe-failure-recovery'; \
-    cmd /c 'C:\nodejs\npm.cmd uninstall hubot-heroku-keepalive --save' ; \
+    cmd /c 'C:\nodejs\npm.cmd uninstall hubot-heroku-keepalive' ; \
     rm -Force c:\hubot\hubot-scripts.json
 
 COPY external-scripts.json C:\\hubot\\external-scripts.json
