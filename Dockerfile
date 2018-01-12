@@ -75,4 +75,4 @@ COPY Dockerfile C:\\Dockerfile
 
 WORKDIR C:\\hubot
 EXPOSE 8080
-CMD ["bin\\hubot", "--adapter slack"]
+CMD ["C:\\hubot\\bin\\hubot", "--adapter slack"]
