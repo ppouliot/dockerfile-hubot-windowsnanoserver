@@ -6,11 +6,6 @@ ENV NODEJS_VERSION 9.4.0
 SHELL ["powershell", "-command"]
 
 RUN \
-    # Install Docker in Docker
-    Install-Module -Name DockerMsftProvider -Repository PSGallery -Force \
-    Install-Package -Name docker -ProviderName DockerMsftProvider
-
-RUN \
     # Install NodeJS
     Invoke-WebRequest -Uri https://nodejs.org/dist/latest-v9.x/node-v$ENV:NODEJS_VERSION-win-x64.zip -Outfile c:\node-v$ENV:NODEJS_VERSION-win-x64.zip; \
     Expand-Archive -Path C:\node-v$ENV:NODEJS_VERSION-win-x64.zip -DestinationPath C:\ -Force; \
