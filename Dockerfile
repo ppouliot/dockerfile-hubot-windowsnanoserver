@@ -4,6 +4,12 @@ MAINTAINER Peter J. Pouliot <peter@pouliot.net>
 ENV NODEJS_VERSION 9.4.0
 
 SHELL ["powershell", "-command"]
+
+RUN \
+    # Install Docker in Docker
+    Install-Module -Name DockerMsftProvider -Repository PSGallery -Force ; \
+    Install-Package -Name docker -ProviderName DockerMsftProvider
+
 RUN \
     # Install NodeJS
     Invoke-WebRequest -Uri https://nodejs.org/dist/latest-v9.x/node-v$ENV:NODEJS_VERSION-win-x64.zip -Outfile c:\node-v$ENV:NODEJS_VERSION-win-x64.zip; \
@@ -44,6 +50,7 @@ RUN (Get-Content C:\Redis\redis.windows.conf) \
 	-Replace '^(protected-mode)\s+.*$', '$1 no' \
 	| Set-Content C:\Redis\redis.docker.conf
 
+# Install Hubot and related npms
 RUN \
     cmd /c 'C:\nodejs\npm.cmd install -g yo generator-hubot'; \
     md c:\hubot ;\
