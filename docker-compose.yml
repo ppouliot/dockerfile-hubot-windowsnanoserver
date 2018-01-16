@@ -1,11 +1,9 @@
 version: '3'
 services:                                                 
-  rakbot:                                      
+  hubot:                                      
     image: ppouliot/hubot-windowsnanoserver
     build: .                                     
     ports:                                    
-      - "6379"                        
       - "8080"                   
     volumes:                                   
-      - "c:\\data"  
       - "c:\\hubot
