@@ -43,7 +43,7 @@ RUN \
 COPY external-scripts.json C:\\hubot\\external-scripts.json
 COPY hubot-start.ps1 C:\\hubot\\hubot-start.ps1
 COPY Dockerfile C:\\Dockerfile
-
+# Run the hubot and expose the ports
 EXPOSE 8080
 WORKDIR c:/hubot
 CMD bin/hubot --adapter slack
