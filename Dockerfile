@@ -45,6 +45,5 @@ COPY hubot-start.ps1 C:\\hubot\\hubot-start.ps1
 COPY Dockerfile C:\\Dockerfile
 
 EXPOSE 8080
-VOLUME C:\\hubot
 WORKDIR C:\\hubot
 CMD ["C:\\hubot\\bin\\hubot", "--adapter slack"]
