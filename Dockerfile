@@ -46,3 +46,4 @@ COPY Dockerfile C:\\Dockerfile
 
 EXPOSE 8080
 WORKDIR c:/hubot
+CMD bin/hubot --adapter slack
