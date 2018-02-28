@@ -1,7 +1,7 @@
 FROM microsoft/nanoserver:latest
 MAINTAINER Peter J. Pouliot <peter@pouliot.net>
 
-ENV NODEJS_VERSION 9.4.0
+ENV NODEJS_VERSION 9.6.1
 
 #SHELL ["powershell", "-command"]
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
@@ -31,6 +31,7 @@ RUN \
     minimatch \
     uuid \
     hubot-jenkins-enhanced \
+    hubot-confluence-search \
     hubot-github \
     hubot-ghe \
     hubot-ghe-backup-snapshot \
