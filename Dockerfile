@@ -32,6 +32,7 @@ RUN \
     uuid \
     hubot-jenkins-enhanced \
     hubot-confluence-search \
+    hubot-octocat \
     hubot-github \
     hubot-ghe \
     hubot-ghe-backup-snapshot \
